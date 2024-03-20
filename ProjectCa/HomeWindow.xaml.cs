@@ -24,6 +24,7 @@ namespace ProjectCa
     /// </summary>
     public partial class HomWindow : Window
     {
+        //bob
         static string filePath = "..\\..\\gym.json";
         //static string filePath = @"C:\Users\S00235259\OneDrive - Atlantic TU\Semester 4\ObjectOrientedDevelopment\ProjectCa\ProjectCa\gym.json";
         public HomWindow()
