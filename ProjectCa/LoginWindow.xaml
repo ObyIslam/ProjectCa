@@ -5,17 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectCa"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="LoginWindow" Height="450" Width="800" Loaded="Window_Loaded" Background="Black">
     <Grid Height="400px" Width="600px">
         <Grid.RowDefinitions>
-            <RowDefinition Height="150"/>
-            <RowDefinition Height="250"/>
+            <RowDefinition Height="160"/>
+            <RowDefinition Height="255"/>
         </Grid.RowDefinitions>
-        <TextBox x:Name="gmail_tbx" HorizontalAlignment="Left" Margin="305,30,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="222" FontSize="14"/>
-        <TextBlock HorizontalAlignment="Left" Height="20" Margin="141,32,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="141" FontFamily="Arial Black" FontSize="16"><Run Text="Member "/><Run Language="en-gb" Text="G"/><Run Text="mail"/><Run Text=":"/><LineBreak/><Run/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Height="20" Margin="141,81,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="141" FontFamily="Arial Black" FontSize="16"><Run Language="en-gb" Text="Password:"/><LineBreak/><Run/></TextBlock>
-        <TextBox x:Name="password_tbx" HorizontalAlignment="Left" Margin="305,81,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="222" FontSize="14"/>
-        <Button x:Name="login_btn" Content="Login" HorizontalAlignment="Center" Height="36" Margin="0,134,0,0" Grid.Row="1" VerticalAlignment="Top" Width="145" Click="login_btn_Click"/>
-        <TextBlock HorizontalAlignment="Center" Height="36" Margin="0,104,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Width="84" FontFamily="Arial Black" FontSize="24"/>
+        <TextBox x:Name="gmail_tbx" HorizontalAlignment="Left" Margin="305,34,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="222" FontSize="14" Height="21"/>
+        <TextBlock HorizontalAlignment="Left" Height="28" Margin="141,36,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="141" FontFamily="Bahnschrift SemiBold Condensed" FontSize="24" Foreground="White"><Run Text="Member "/><Run Language="en-gb" Text="G"/><Run Text="mail"/><Run Text=":"/><LineBreak/><Run/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="30" Margin="141,83,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="141" FontFamily="Bahnschrift SemiBold Condensed" FontSize="24" Foreground="White"><Run Language="en-gb" Text="Password:"/><LineBreak/><Run/></TextBlock>
+        <TextBox x:Name="password_tbx" HorizontalAlignment="Left" Margin="305,83,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="222" FontSize="14" Height="20"/>
+        <Button x:Name="login_btn" Content="Login" HorizontalAlignment="Center" Height="36" Margin="0,143,0,0" Grid.Row="1" VerticalAlignment="Top" Width="144" Click="login_btn_Click" Foreground="White" FontSize="18" FontFamily="Arial" Background="#FF1F83EA">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" BorderThickness="0" CornerRadius="7">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Image Source="/images/dumbellicon2.jpg" Margin="184,75,59,33"/>
+        <TextBlock HorizontalAlignment="Left" Height="41" Margin="186,80,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Width="112" FontFamily="Arial Black" FontSize="36" Foreground="White"/>
+        <Rectangle HorizontalAlignment="Left" Height="34" Stroke="#FF273033" VerticalAlignment="Top" Width="635" Fill="#FF273033" Margin="-35,0,0,0"/>
+        <Rectangle HorizontalAlignment="Left" Height="34" Stroke="#FF273033" VerticalAlignment="Top" Width="635" Fill="#FF273033" Margin="-20,208,0,0" Grid.Row="1"/>
     </Grid>
 </Window>

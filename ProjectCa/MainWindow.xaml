@@ -5,17 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectCa"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Background="Black">
+
+    <Window.Resources>
+        <!-- Define the FontFamily for the Google Font -->
+        <FontFamily x:Key="GoogleFont">/GymApp;component/Fonts/Roboto-Regular.ttf#Roboto</FontFamily>
+    </Window.Resources>
+
     <Grid Height="400px" Width="600px">
         <Grid.RowDefinitions>
             <RowDefinition Height="150"/>
             <RowDefinition Height="250"/>
         </Grid.RowDefinitions>
-        <Label Content="Already a member Login " HorizontalAlignment="Center" VerticalAlignment="Top" Width="204" Height="31" FontFamily="Arial Rounded MT Bold" FontSize="16" Margin="0,46,0,0" Grid.Row="1"/>
-        <Label Content="OR" HorizontalAlignment="Center" VerticalAlignment="Top" Width="40" Height="28" FontFamily="Arial Rounded MT Bold" FontSize="16" Margin="0,77,0,0" Grid.Row="1"/>
-        <Label Content="Register To Create an Account " HorizontalAlignment="Center" VerticalAlignment="Top" Width="252" Height="30" FontFamily="Arial Rounded MT Bold" FontSize="16" Grid.Row="1" Margin="0,105,0,0"/>
-        <Button x:Name="login" Content="Login" HorizontalAlignment="Left" Height="34" Margin="141,172,0,0" Grid.Row="1" VerticalAlignment="Top" Width="130" Click="login_Click" FontFamily="Arial Black" FontSize="16"/>
-        <Button x:Name="Register" Content="Register" HorizontalAlignment="Left" Height="34" Margin="330,172,0,0" Grid.Row="1" VerticalAlignment="Top" Width="130" Click="Register_Click" FontFamily="Arial Black" FontSize="16"/>
-
+        <Label Content="Already a member Login " HorizontalAlignment="Center" VerticalAlignment="Top" Width="208" Height="37" FontFamily="Bahnschrift SemiBold Condensed" FontSize="24" Margin="0,25,0,0" Grid.Row="1" Foreground="White"/>
+        <Label Content="OR" HorizontalAlignment="Center" VerticalAlignment="Top" Width="36" Height="31" FontFamily="Bahnschrift SemiBold Condensed" FontSize="24" Margin="0,62,0,0" Grid.Row="1" Foreground="White"/>
+        <Label Content="Register To Create an Account " HorizontalAlignment="Center" VerticalAlignment="Top" Width="252" Height="37" FontFamily="Bahnschrift SemiBold Condensed" FontSize="24" Grid.Row="1" Margin="0,88,0,0" Foreground="White"/>
+        <Button x:Name="login_btn" Content="Login" HorizontalAlignment="Left" Height="36" Margin="126,152,0,0" Grid.Row="1" VerticalAlignment="Top" Width="144" Click="login_btn_Click" Foreground="White" FontSize="18" FontFamily="Arial" Background="#FF1F83EA">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" BorderThickness="0" CornerRadius="7">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="register_btn" Content="Register" HorizontalAlignment="Left" Height="36" Margin="330,152,0,0" Grid.Row="1" VerticalAlignment="Top" Width="144" Foreground="White" FontSize="18" FontFamily="Arial" Background="#FF1F83EA" Click="register_btn_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" BorderThickness="0" CornerRadius="7">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Image Source="/images/dumbellicon2.jpg" Margin="321,83,90,10"/>
+        <TextBlock Text="GymMate" FontFamily="{StaticResource GoogleFont}" FontSize="48" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Margin="132,83,0,0"/>
+        <Rectangle HorizontalAlignment="Left" Height="34" Stroke="#FF273033" VerticalAlignment="Top" Width="635" Fill="#FF273033" Margin="-35,0,0,0"/>
+        <Rectangle HorizontalAlignment="Left" Height="34" Stroke="#FF273033" VerticalAlignment="Top" Width="635" Fill="#FF273033" Margin="-20,208,0,0" Grid.Row="1"/>
     </Grid>
 </Window>

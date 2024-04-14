@@ -86,9 +86,10 @@ namespace ProjectCa
                     }
                 }
 
-                tbx_commonSearches.Text = description;
+                tbx_commonSearches.Text= description;
             }
         }
+
 
     }
 }

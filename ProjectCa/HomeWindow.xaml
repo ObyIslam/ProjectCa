@@ -5,48 +5,64 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectCa"
         mc:Ignorable="d"
-        Title="HomWindow" Height="450px" Width="800px" Loaded="Window_Loaded">
-    <TabControl TabStripPlacement="Left" Margin="20">
+        Title="HomWindow" Height="450px" Width="800px" Loaded="Window_Loaded" Background="Black">
+    <TabControl TabStripPlacement="Left" Margin="20" Background="#FF797979">
         <TabItem Name="Home" Header="Home" Width="75" Height="35">
-            <Grid>
+            <Grid Background="Black">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="20*"/>
                     <RowDefinition Height="80*"/>
+                    <RowDefinition Height="309*"/>
                 </Grid.RowDefinitions>
-                <TextBlock HorizontalAlignment="Center" Height="58" TextWrapping="Wrap" Text="Home Page" VerticalAlignment="Center" Width="228" FontSize="48" FontFamily="Impact"/>
                 <ListBox x:Name="lbx_CommonSearches" HorizontalAlignment="Left" Height="102" Margin="23,70,0,0" Grid.Row="1" VerticalAlignment="Top" Width="193" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="lbx_CommonSearches_SelectionChanged"/>
-                <TextBox x:Name="tbx_commonSearches" HorizontalAlignment="Left" Height="222" Margin="281,70,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="373"/>
-                <TextBlock HorizontalAlignment="Left" Height="22" Margin="44,28,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="16" FontFamily="Times New Roman"><Run Text="Most Common "/><Run Language="en-gb" Text="Topics"/></TextBlock>
-                <TextBlock HorizontalAlignment="Left" Height="22" Margin="442,28,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="51" FontSize="16" FontFamily="Times New Roman"><Run Language="en-gb" Text="Result"/><LineBreak/><Run Language="en-gb"/></TextBlock>
-                <TextBlock HorizontalAlignment="Left" Height="22" Margin="67,192,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" FontSize="16" FontFamily="Times New Roman"><Run Language="en-gb" Text="Search a Topic"/><LineBreak/><Run Language="en-gb"/></TextBlock>
-                <TextBox HorizontalAlignment="Left" Height="25" Margin="34,220,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="171"/>
+                <TextBlock HorizontalAlignment="Left" Height="22" Margin="56,30,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" FontSize="18" FontFamily="Bahnschrift SemiBold Condensed" Foreground="White"><Run Text="Most Common "/><Run Language="en-gb" Text="Topics"/></TextBlock>
+                <TextBlock HorizontalAlignment="Left" Height="22" Margin="444,32,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" FontSize="18" FontFamily="Bahnschrift SemiBold Condensed" Foreground="White"><Run Language="en-gb" Text="Result"/><LineBreak/><Run Language="en-gb"/></TextBlock>
+                <TextBlock HorizontalAlignment="Left" Height="22" Margin="72,192,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="96" FontSize="18" FontFamily="Bahnschrift SemiBold Condensed" Foreground="White"><Run Language="en-gb" Text="Search a Topic"/><LineBreak/><Run Language="en-gb"/></TextBlock>
+                <TextBox HorizontalAlignment="Left" Height="19" Margin="34,220,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="171"/>
+                <TextBox x:Name="tbx_commonSearches" HorizontalAlignment="Left" Height="202" Margin="310,70,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="314"/>
+                <Rectangle HorizontalAlignment="Center" Height="80" Stroke="#FF273033" VerticalAlignment="Center" Width="657" Fill="#FF1C1C1E"/>
+                <Rectangle HorizontalAlignment="Left" Height="60" Margin="134,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="247" Fill="Black"/>
+                <TextBlock HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" Text="Home Page" VerticalAlignment="Center" Width="172" FontSize="36" FontFamily="Impact" Foreground="White" Margin="166,0,0,0"/>
+                <Image Source="/images/dumbellicon2.jpg" Margin="338,17,0,3" Height="60px" Width="150px" HorizontalAlignment="Left">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleY="-0.203"/>
+                            <RotateTransform Angle="0.116"/>
+                            <TranslateTransform Y="-7.075" X="11.595"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
             </Grid>
         </TabItem>
         <TabItem Name="Squat" Header="Squat" Width="75" Height="35">
-            <Grid>
+            <Grid Background="Black">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="20*"/>
                     <RowDefinition Height="80*"/>
                 </Grid.RowDefinitions>
-                <TextBlock HorizontalAlignment="Center" Height="58" TextWrapping="Wrap" Text="Squats" VerticalAlignment="Center" Width="145" FontSize="48" FontFamily="Impact"/>
+                <Rectangle HorizontalAlignment="Center" Height="80" Stroke="#FF273033" VerticalAlignment="Top" Width="657" Fill="#FF1C1C1E" Grid.RowSpan="2"/>
+                <TextBlock HorizontalAlignment="Center" Height="58" TextWrapping="Wrap" Text="Squats" VerticalAlignment="Center" Width="145" FontSize="48" FontFamily="Impact" Foreground="White"/>
+                <TextBlock HorizontalAlignment="Left" Height="22" Margin="84,41,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="85" FontSize="18" FontFamily="Bahnschrift SemiBold Condensed" Foreground="White" RenderTransformOrigin="0.256,1.238" Text="How to Squat"/>
+                <Rectangle HorizontalAlignment="Left" Height="136" Margin="21,68,0,0" Grid.Row="1" VerticalAlignment="Top" Width="268" Stroke="White" Fill="White"/>
+                <TextBlock HorizontalAlignment="Left" Height="133" Margin="30,76,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="254"><Run Language="en-gb" Text="1. "/><Run Text="Starting Position: Stand with feet shoulder-width apart, chest up, and core engaged."/><LineBreak/><Run Language="en-gb" Text="2. "/><Run Text="Lowering Phase: Push hips back and bend knees, lowering body as if sitting into a chair."/><LineBreak/><Run Language="en-gb" Text="3. "/><Run Text="Bottom Position: Thighs should be parallel to the ground, knees in line with toes."/><LineBreak/><Run Language="en-gb" Text="4. "/><Run Text="Ascending Phase: Push through heels to straighten legs and return to starting position."/><LineBreak/><Run/></TextBlock>
             </Grid>
         </TabItem>
         <TabItem Name="Bench" Header="Bench" Width="75" Height="35">
-            <Grid>
+            <Grid Background="Black">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="20*"/>
                     <RowDefinition Height="80*"/>
                 </Grid.RowDefinitions>
-                <TextBlock HorizontalAlignment="Center" Height="58" TextWrapping="Wrap" Text="Benching" VerticalAlignment="Center" Width="196" FontSize="48" FontFamily="Impact"/>
+                <TextBlock HorizontalAlignment="Center" Height="58" TextWrapping="Wrap" Text="Benching" VerticalAlignment="Center" Width="196" FontSize="48" FontFamily="Impact" Foreground="White"/>
             </Grid>
         </TabItem>
         <TabItem Name="Deadlift" Header="Deadlift" Width="75" Height="35">
-            <Grid>
+            <Grid Background="Black">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="20*"/>
                     <RowDefinition Height="80*"/>
                 </Grid.RowDefinitions>
-                <TextBlock HorizontalAlignment="Center" Height="58" TextWrapping="Wrap" Text="Deadlifts" VerticalAlignment="Center" Width="185" FontSize="48" FontFamily="Impact"/>
+                <TextBlock HorizontalAlignment="Center" Height="58" TextWrapping="Wrap" Text="Deadlifts" VerticalAlignment="Center" Width="185" FontSize="48" FontFamily="Impact" Foreground="White"/>
             </Grid>
         </TabItem>
     </TabControl>

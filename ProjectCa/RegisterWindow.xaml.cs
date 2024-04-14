@@ -23,9 +23,15 @@ namespace ProjectCa
         public RegisterWindow()
         {
             InitializeComponent();
+        }   
+
+        private void openMainWindow()
+        {
+            var newWindow = new MainWindow();
+            newWindow.Show();
         }
 
-        private void register_btn_Click(object sender, RoutedEventArgs e)
+        private void register_btn1_Click(object sender, RoutedEventArgs e)
         {
             Model1Container DB = new Model1Container();
 
@@ -37,7 +43,7 @@ namespace ProjectCa
             {
                 if (string.IsNullOrEmpty(gmail_tbx.Text) || string.IsNullOrEmpty(password_tbx.Text) || string.IsNullOrEmpty(memberFirstName_tbx.Text) || string.IsNullOrEmpty(memberLastName_tbx.Text))
                 {
-                    MessageBox.Show("Please fill in the required details:" );
+                    MessageBox.Show("Please fill in the required details:");
                 }
                 else
                 {
@@ -57,12 +63,6 @@ namespace ProjectCa
             {
                 MessageBox.Show("Please fill in the required details:" + ex);
             }
-        }
-
-        private void openMainWindow()
-        {
-            var newWindow = new MainWindow();
-            newWindow.Show();
         }
     }
 }

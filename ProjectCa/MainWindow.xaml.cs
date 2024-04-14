@@ -25,11 +25,7 @@ namespace ProjectCa
             InitializeComponent();
         }
 
-        private void login_Click(object sender, RoutedEventArgs e)
-        {
-            openLoginWindow();
-            this.Close();
-        }
+
 
         private void openLoginWindow()
         {
@@ -37,16 +33,22 @@ namespace ProjectCa
             newWindow.Show();
         }
 
-        private void Register_Click(object sender, RoutedEventArgs e)
-        {
-            openRegisterWindow();
-            this.Close();
-        }
-
         private void openRegisterWindow()
         {
             var newWindow = new RegisterWindow();
             newWindow.Show();
+        }
+
+        private void login_btn_Click(object sender, RoutedEventArgs e)
+        {
+            openLoginWindow();
+            this.Close();
+        }
+
+        private void register_btn_Click(object sender, RoutedEventArgs e)
+        {
+            openRegisterWindow();
+            this.Close();
         }
     }
 }
