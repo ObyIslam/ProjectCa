@@ -21,7 +21,7 @@
                 <TextBox x:Name="tbx_commonSearches" HorizontalAlignment="Left" Height="202" Margin="310,70,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="314"/>
                 <Rectangle HorizontalAlignment="Center" Height="80" Stroke="#FF273033" VerticalAlignment="Center" Width="657" Fill="#FF1C1C1E"/>
                 <Rectangle HorizontalAlignment="Left" Height="60" Margin="134,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="247" Fill="Black"/>
-                <TextBlock HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" Text="Home Page" VerticalAlignment="Center" Width="172" FontSize="36" FontFamily="Impact" Foreground="White" Margin="166,0,0,0"/>
+                <TextBlock Height="43" TextWrapping="Wrap" Text="Home Page" VerticalAlignment="Center" FontSize="36" FontFamily="Impact" Foreground="White" Margin="166,0,339,0"/>
                 <Image Source="/images/dumbellicon2.jpg" Margin="338,17,0,3" Height="60px" Width="150px" HorizontalAlignment="Left">
                     <Image.RenderTransform>
                         <TransformGroup>
@@ -41,10 +41,12 @@
                     <RowDefinition Height="80*"/>
                 </Grid.RowDefinitions>
                 <Rectangle HorizontalAlignment="Center" Height="80" Stroke="#FF273033" VerticalAlignment="Top" Width="657" Fill="#FF1C1C1E" Grid.RowSpan="2"/>
-                <TextBlock HorizontalAlignment="Center" Height="58" TextWrapping="Wrap" Text="Squats" VerticalAlignment="Center" Width="145" FontSize="48" FontFamily="Impact" Foreground="White"/>
-                <TextBlock HorizontalAlignment="Left" Height="22" Margin="84,41,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="85" FontSize="18" FontFamily="Bahnschrift SemiBold Condensed" Foreground="White" RenderTransformOrigin="0.256,1.238" Text="How to Squat"/>
-                <Rectangle HorizontalAlignment="Left" Height="136" Margin="21,68,0,0" Grid.Row="1" VerticalAlignment="Top" Width="268" Stroke="White" Fill="White"/>
-                <TextBlock HorizontalAlignment="Left" Height="133" Margin="30,76,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="254"><Run Language="en-gb" Text="1. "/><Run Text="Starting Position: Stand with feet shoulder-width apart, chest up, and core engaged."/><LineBreak/><Run Language="en-gb" Text="2. "/><Run Text="Lowering Phase: Push hips back and bend knees, lowering body as if sitting into a chair."/><LineBreak/><Run Language="en-gb" Text="3. "/><Run Text="Bottom Position: Thighs should be parallel to the ground, knees in line with toes."/><LineBreak/><Run Language="en-gb" Text="4. "/><Run Text="Ascending Phase: Push through heels to straighten legs and return to starting position."/><LineBreak/><Run/></TextBlock>
+                <TextBlock HorizontalAlignment="Center" Height="58" TextWrapping="Wrap" Text="Squats" VerticalAlignment="Top" Width="145" FontSize="48" FontFamily="Impact" Foreground="White" Margin="0,10,0,0"/>
+                <TextBlock HorizontalAlignment="Left" Height="28" Margin="118,43,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="24" FontFamily="Bahnschrift SemiBold Condensed" Foreground="#FF1F83EA" RenderTransformOrigin="0.256,1.238" Text="How to Squat"/>
+                <Rectangle HorizontalAlignment="Left" Height="136" Margin="41,88,0,0" Grid.Row="1" VerticalAlignment="Top" Width="268" Stroke="White" Fill="White"/>
+                <TextBlock HorizontalAlignment="Left" Height="133" Margin="48,95,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="254"><Run Language="en-gb" Text="1. "/><Run Text="Starting Position: Stand with feet shoulder-width apart, chest up, and core engaged."/><LineBreak/><Run Language="en-gb" Text="2. "/><Run Text="Lowering Phase: Push hips back and bend knees, lowering body as if sitting into a chair."/><LineBreak/><Run Language="en-gb" Text="3. "/><Run Text="Bottom Position: Thighs should be parallel to the ground, knees in line with toes."/><LineBreak/><Run Language="en-gb" Text="4. "/><Run Text="Ascending Phase: Push through heels to straighten legs and return to starting position."/><LineBreak/><Run/></TextBlock>
+                <TextBlock HorizontalAlignment="Left" Height="22" Margin="482,41,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="36" FontSize="18" FontFamily="Bahnschrift SemiBold Condensed" Foreground="White" RenderTransformOrigin="0.256,1.238" Text="Video"/>
+                <Image Source="/images/Squat.jpg" Margin="368,34,0,34" Width="247" HorizontalAlignment="Left" Grid.Row="1"/>
             </Grid>
         </TabItem>
         <TabItem Name="Bench" Header="Bench" Width="75" Height="35">
@@ -53,7 +55,12 @@
                     <RowDefinition Height="20*"/>
                     <RowDefinition Height="80*"/>
                 </Grid.RowDefinitions>
-                <TextBlock HorizontalAlignment="Center" Height="58" TextWrapping="Wrap" Text="Benching" VerticalAlignment="Center" Width="196" FontSize="48" FontFamily="Impact" Foreground="White"/>
+                <TextBlock HorizontalAlignment="Left" Height="29" Margin="118,43,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="114" FontSize="24" FontFamily="Bahnschrift SemiBold Condensed" Foreground="#FF1F83EA" RenderTransformOrigin="0.256,1.238" Text="How to Bench"/>
+                <Rectangle HorizontalAlignment="Left" Height="171" Margin="41,88,0,0" Grid.Row="1" VerticalAlignment="Top" Width="265" Stroke="White" Fill="White"/>
+                <Rectangle HorizontalAlignment="Center" Height="80" Stroke="#FF273033" VerticalAlignment="Top" Width="657" Fill="#FF1C1C1E" Grid.RowSpan="2"/>
+                <TextBlock HorizontalAlignment="Center" Height="58" TextWrapping="Wrap" Text="Benching" VerticalAlignment="Top" Width="196" FontSize="48" FontFamily="Impact" Foreground="White" Margin="0,10,0,0"/>
+                <TextBlock HorizontalAlignment="Left" Height="161" Margin="48,95,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="254"><Run Text="1. "/><Run Text="Starting Position: Lie flat on a bench with feet firmly on the ground, gripping the barbell with hands slightly wider than shoulder-width apart."/><LineBreak/><Run Text="2. "/><Run Text="Lowering Phase: Lower the barbell slowly towards the chest, keeping elbows at a 45-degree angle to the body."/><LineBreak/><Run Text="3. "/><Run Text="Bottom Position: Barbell should lightly touch the chest, maintaining a stable core and flat back."/><LineBreak/><Run Language="en-gb" Text="4. "/><Run Text="Ascending Phase: Push the barbell upwards by extending the arms, returning to the starting position without locking the elbows."/><LineBreak/><Run/></TextBlock>
+                <Image Source="/images/bench.jpg" Margin="368,34,0,34" Width="247" HorizontalAlignment="Left" Grid.Row="1"/>
             </Grid>
         </TabItem>
         <TabItem Name="Deadlift" Header="Deadlift" Width="75" Height="35">
@@ -62,7 +69,12 @@
                     <RowDefinition Height="20*"/>
                     <RowDefinition Height="80*"/>
                 </Grid.RowDefinitions>
-                <TextBlock HorizontalAlignment="Center" Height="58" TextWrapping="Wrap" Text="Deadlifts" VerticalAlignment="Center" Width="185" FontSize="48" FontFamily="Impact" Foreground="White"/>
+                <Rectangle HorizontalAlignment="Center" Height="80" Stroke="#FF273033" VerticalAlignment="Top" Width="657" Fill="#FF1C1C1E" Grid.RowSpan="2"/>
+                <TextBlock HorizontalAlignment="Center" Height="58" TextWrapping="Wrap" Text="Deadlifts" VerticalAlignment="Top" Width="185" FontSize="48" FontFamily="Impact" Foreground="White" Margin="0,10,0,0"/>
+                <TextBlock HorizontalAlignment="Left" Height="29" Margin="118,43,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" FontSize="24" FontFamily="Bahnschrift SemiBold Condensed" Foreground="#FF1F83EA" RenderTransformOrigin="0.256,1.238" Text="How to Deadlift"/>
+                <Rectangle HorizontalAlignment="Left" Height="200" Margin="41,88,0,0" Grid.Row="1" VerticalAlignment="Top" Width="265" Stroke="White" Fill="White"/>
+                <TextBlock HorizontalAlignment="Left" Height="195" Margin="48,95,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="254"><Run Language="en-gb" Text="1. "/><Run Text="Starting Position: Stand with feet hip-width apart, toes under the barbell, and grip slightly wider than shoulder-width."/><LineBreak/><Run Language="en-gb" Text="2. "/><Run Text="Lowering Phase: Hinge at the hips, push the hips back, and bend the knees to grip the barbell with a neutral spine."/><LineBreak/><Run Language="en-gb" Text="3. "/><Run Text="Bottom Position: Shins should be vertical, back straight, and head in a neutral position, ready to lift."/><LineBreak/><Run Language="en-gb" Text="4. "/><Run Text="Ascending Phase: Push through the heels, straighten the legs, and thrust the hips forward to lift the barbell to a standing position. extending the arms, returning to the starting position without locking the elbows."/><LineBreak/><Run/></TextBlock>
+                <Image Source="/images/deadlift.jpg" Margin="368,34,0,34" Width="247" HorizontalAlignment="Left" Grid.Row="1"/>
             </Grid>
         </TabItem>
     </TabControl>
