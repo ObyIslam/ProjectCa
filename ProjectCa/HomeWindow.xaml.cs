@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using Newtonsoft.Json;
 
 
@@ -27,6 +28,8 @@ namespace ProjectCa
         //bob
         static string filePath = "..\\..\\gym.json";
         //static string filePath = @"C:\Users\S00235259\OneDrive - Atlantic TU\Semester 4\ObjectOrientedDevelopment\ProjectCa\ProjectCa\gym.json";
+        private DispatcherTimer timer;
+        private TimeSpan elapsedTime;
         public HomWindow()
         {
             InitializeComponent();
@@ -90,6 +93,22 @@ namespace ProjectCa
             }
         }
 
+
+        private void start_workout_btn_Click(object sender, RoutedEventArgs e)
+        {
+            if (timer == null)
+            {
+                timer = new DispatcherTimer();
+                timer.Interval = TimeSpan.FromSeconds(1);
+                timer.Tick += Timer_Tick;
+            }
+            timer.Start();
+        }
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            elapsedTime = elapsedTime.Add(TimeSpan.FromSeconds(1));
+            TimerDisplay.Text = elapsedTime.ToString(@"hh\:mm\:ss");
+        }
 
     }
 }

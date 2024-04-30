@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ProjectCa"
         mc:Ignorable="d"
         Title="HomWindow" Height="450px" Width="800px" Loaded="Window_Loaded" Background="Black">
-    <TabControl TabStripPlacement="Left" Margin="20" Background="#FF797979">
+    <TabControl TabStripPlacement="Left" Margin="20" Background="Black">
         <TabItem Name="Home" Header="Home" Width="75" Height="35">
             <Grid Background="Black">
                 <Grid.RowDefinitions>
@@ -14,9 +14,9 @@
                     <RowDefinition Height="309*"/>
                 </Grid.RowDefinitions>
                 <ListBox x:Name="lbx_CommonSearches" HorizontalAlignment="Left" Height="102" Margin="23,70,0,0" Grid.Row="1" VerticalAlignment="Top" Width="193" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="lbx_CommonSearches_SelectionChanged"/>
-                <TextBlock HorizontalAlignment="Left" Height="22" Margin="56,30,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" FontSize="18" FontFamily="Bahnschrift SemiBold Condensed" Foreground="White"><Run Text="Most Common "/><Run Language="en-gb" Text="Topics"/></TextBlock>
-                <TextBlock HorizontalAlignment="Left" Height="22" Margin="444,32,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" FontSize="18" FontFamily="Bahnschrift SemiBold Condensed" Foreground="White"><Run Language="en-gb" Text="Result"/><LineBreak/><Run Language="en-gb"/></TextBlock>
-                <TextBlock HorizontalAlignment="Left" Height="22" Margin="72,192,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="96" FontSize="18" FontFamily="Bahnschrift SemiBold Condensed" Foreground="White"><Run Language="en-gb" Text="Search a Topic"/><LineBreak/><Run Language="en-gb"/></TextBlock>
+                <TextBlock HorizontalAlignment="Left" Height="22" Margin="56,30,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" FontSize="18" FontFamily="Bahnschrift SemiBold Condensed" Foreground="#FF1F83EA"><Run Text="Most Common "/><Run Language="en-gb" Text="Topics"/></TextBlock>
+                <TextBlock HorizontalAlignment="Left" Height="22" Margin="444,32,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" FontSize="18" FontFamily="Bahnschrift SemiBold Condensed" Foreground="#FF1F83EA"><Run Language="en-gb" Text="Result"/><LineBreak/><Run Language="en-gb"/></TextBlock>
+                <TextBlock HorizontalAlignment="Left" Height="22" Margin="72,192,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="96" FontSize="18" FontFamily="Bahnschrift SemiBold Condensed" Foreground="#FF1F83EA"><Run Language="en-gb" Text="Search a Topic"/><LineBreak/><Run Language="en-gb"/></TextBlock>
                 <TextBox HorizontalAlignment="Left" Height="19" Margin="34,220,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="171"/>
                 <TextBox x:Name="tbx_commonSearches" HorizontalAlignment="Left" Height="202" Margin="310,70,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="314"/>
                 <Rectangle HorizontalAlignment="Center" Height="80" Stroke="#FF273033" VerticalAlignment="Center" Width="657" Fill="#FF1C1C1E"/>
@@ -77,5 +77,40 @@
                 <Image Source="/images/deadlift.jpg" Margin="368,34,0,34" Width="247" HorizontalAlignment="Left" Grid.Row="1"/>
             </Grid>
         </TabItem>
+        <TabItem Name="Workout" Header="Workout" Width="75" Height="35">
+            <Grid Background="Black">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="80*"/>
+                </Grid.RowDefinitions>
+                <Rectangle HorizontalAlignment="Center" Height="80" Stroke="#FF273033" VerticalAlignment="Top" Width="657" Fill="#FF1C1C1E" Grid.RowSpan="2"/>
+                <TextBlock HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" Text="Log Workout" VerticalAlignment="Center" Width="253" FontSize="48" FontFamily="Impact" Foreground="White" Margin="25,0,0,0"/>
+                <Button x:Name="start_workout_btn" Content="Start Workout" HorizontalAlignment="Left" Height="29" Margin="25,20,0,0" Grid.Row="1" VerticalAlignment="Top" Width="144" Foreground="White" FontSize="16" FontFamily="Arial" Background="#FF1F83EA" Click="start_workout_btn_Click">
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Background="{TemplateBinding Background}" BorderThickness="0" CornerRadius="7">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <TextBlock HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="Duration" VerticalAlignment="Top" Width="78" FontSize="20" FontFamily="Impact" Foreground="White" Margin="338,10,0,0"/>
+                <TextBlock HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="Volume" VerticalAlignment="Top" Width="68" FontSize="20" FontFamily="Impact" Foreground="White" Margin="456,10,0,0"/>
+                <TextBlock x:Name="TimerDisplay" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" Width="78" Margin="338,39,0,0" Foreground="#FF1F83EA"/>
+                <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Margin="25,103,399,53" Grid.Row="1"/>
+                <Button x:Name="add_excerise_btn" Content="Add Excercise" HorizontalAlignment="Left" Height="24" Margin="24,277,0,0" Grid.Row="1" VerticalAlignment="Top" Width="128" Foreground="White" FontSize="14" FontFamily="Arial" Background="#FF1F83EA" Click="start_workout_btn_Click">
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Background="{TemplateBinding Background}" BorderThickness="0" CornerRadius="7">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <TextBox TextWrapping="Wrap" Margin="104,69,479,222" Grid.Row="1"/>
+            </Grid>
+        </TabItem>
+
+
     </TabControl>
 </Window>
