@@ -64,5 +64,13 @@ namespace ProjectCa
                 MessageBox.Show("Please fill in the required details:" + ex);
             }
         }
+
+        private void back_btn_Click(object sender, RoutedEventArgs e)
+        {
+            openMainWindow();
+            this.Close();
+        }
+
+        
     }
 }

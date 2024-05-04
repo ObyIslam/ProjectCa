@@ -38,5 +38,14 @@
         <Rectangle HorizontalAlignment="Left" Height="34" Stroke="#FF273033" VerticalAlignment="Top" Width="635" Fill="#FF273033" Margin="-35,0,0,0"/>
         <Rectangle HorizontalAlignment="Left" Height="34" Stroke="#FF273033" VerticalAlignment="Top" Width="635" Fill="#FF273033" Margin="-20,208,0,0" Grid.Row="1"/>
         <Image Source="/images/dumbellicon2.jpg" Margin="205,61,-49,14"/>
+        <Button x:Name="back_btn" Content="&lt;" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="73" Foreground="White" FontSize="38" FontFamily="Arial" Background="#FF1F83EA" Click="back_btn_Click" Margin="-35,39,0,0">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" BorderThickness="0" CornerRadius="7">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
     </Grid>
 </Window>

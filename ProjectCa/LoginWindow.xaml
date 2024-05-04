@@ -28,5 +28,23 @@
         <TextBlock HorizontalAlignment="Left" Height="41" Margin="186,80,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Width="112" FontFamily="Arial Black" FontSize="36" Foreground="White"/>
         <Rectangle HorizontalAlignment="Left" Height="34" Stroke="#FF273033" VerticalAlignment="Top" Width="635" Fill="#FF273033" Margin="-35,0,0,0"/>
         <Rectangle HorizontalAlignment="Left" Height="34" Stroke="#FF273033" VerticalAlignment="Top" Width="635" Fill="#FF273033" Margin="-20,208,0,0" Grid.Row="1"/>
+        <Button x:Name="login_btn_Copy" Content="Login" HorizontalAlignment="Center" Height="36" Margin="0,143,0,0" Grid.Row="1" VerticalAlignment="Top" Width="144" Click="login_btn_Click" Foreground="White" FontSize="18" FontFamily="Arial" Background="#FF1F83EA">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" BorderThickness="0" CornerRadius="7">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="back_btn" Content="&lt;" HorizontalAlignment="Left" Height="40" Margin="0,39,0,0" VerticalAlignment="Top" Width="73" Foreground="White" FontSize="38" FontFamily="Arial" Background="#FF1F83EA" Click="back_btn_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" BorderThickness="0" CornerRadius="7">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
     </Grid>
 </Window>

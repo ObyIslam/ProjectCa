@@ -27,6 +27,7 @@ namespace ProjectCa
     {
         //bob
         static string filePath = "..\\..\\gym.json";
+        static string filePath2 = "..\\..\\workout.json";
         //static string filePath = @"C:\Users\S00235259\OneDrive - Atlantic TU\Semester 4\ObjectOrientedDevelopment\ProjectCa\ProjectCa\gym.json";
         private DispatcherTimer timer;
         private TimeSpan elapsedTime;
@@ -37,33 +38,52 @@ namespace ProjectCa
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            //checks if file exists
-            if (!File.Exists(filePath))
+            // Check if gym JSON file exists
+            if (!File.Exists(filePath2))
             {
-                lbx_CommonSearches.ItemsSource = "File not found";
+                display_excercises_lbx.ItemsSource = new List<string> { "File not found" };
                 return;
             }
 
             try
             {
+                // Deserialize gym JSON
                 string jsonText = File.ReadAllText(filePath);
-                //makes it into a readable format
-                GymInfo GymInfoWrapper = JsonConvert.DeserializeObject<GymInfo>(jsonText);
+                GymInfo gymInfoWrapper = JsonConvert.DeserializeObject<GymInfo>(jsonText);
 
+                // Populate common searches
                 List<string> topics = new List<string>();
-
-                foreach (var gymTopic in GymInfoWrapper.fitness_info)
+                foreach (var gymTopic in gymInfoWrapper.fitness_info)
                 {
                     topics.Add(gymTopic.Topic);
                 }
-
                 lbx_CommonSearches.ItemsSource = topics;
+
+                // Deserialize workout JSON
+                string jsonText2 = File.ReadAllText(filePath2);
+                Excercises exerciseData = JsonConvert.DeserializeObject<Excercises>(jsonText2);
+
+                // Populate exercises list
+                List<string> listOfExercises = new List<string>();
+                foreach (var exercise in exerciseData.exercises)
+                {
+                    listOfExercises.Add(exercise.name);
+                }
+
+                // Set exercises as ItemsSource for display_excercises_lbx
+                display_excercises_lbx.ItemsSource = listOfExercises;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                lbx_CommonSearches.ItemsSource = ex.Message;
+                // Log the error or display a generic error message
+                // You can log ex.ToString() to get the full exception details
+                Console.WriteLine($"An error occurred: {ex.Message}");
+                display_excercises_lbx.ItemsSource = new List<string> { "An error occurred. Please try again later." };
             }
         }
+
+
+
 
         private void lbx_CommonSearches_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -109,6 +129,7 @@ namespace ProjectCa
             elapsedTime = elapsedTime.Add(TimeSpan.FromSeconds(1));
             TimerDisplay.Text = elapsedTime.ToString(@"hh\:mm\:ss");
         }
+
 
     }
 }

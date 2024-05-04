@@ -59,5 +59,17 @@ namespace ProjectCa
             var newWindow = new HomWindow();
             newWindow.Show();
         }
+
+        private void back_btn_Click(object sender, RoutedEventArgs e)
+        {
+            openMainWindow();
+            this.Close();
+        }
+
+        private void openMainWindow()
+        {
+            var newWindow = new MainWindow();
+            newWindow.Show();
+        }
     }
 }

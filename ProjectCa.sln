@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Json", "Json", "{A4FE179E-1252-46BD-9A9B-8848ED3EA3D6}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\..\Json\gym.json = ..\..\..\Json\gym.json
+		ProjectCa\workout.json = ProjectCa\workout.json
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testJson", "testJson\testJson.csproj", "{EE637AB0-A1B1-4339-BE8F-4C7C383CDCCC}"
