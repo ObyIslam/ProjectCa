@@ -17,7 +17,7 @@
                 <TextBlock HorizontalAlignment="Left" Height="22" Margin="56,30,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" FontSize="18" FontFamily="Bahnschrift SemiBold Condensed" Foreground="#FF1F83EA"><Run Text="Most Common "/><Run Language="en-gb" Text="Topics"/></TextBlock>
                 <TextBlock HorizontalAlignment="Left" Height="22" Margin="444,32,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" FontSize="18" FontFamily="Bahnschrift SemiBold Condensed" Foreground="#FF1F83EA"><Run Language="en-gb" Text="Result"/><LineBreak/><Run Language="en-gb"/></TextBlock>
                 <TextBlock HorizontalAlignment="Left" Height="22" Margin="72,192,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="96" FontSize="18" FontFamily="Bahnschrift SemiBold Condensed" Foreground="#FF1F83EA"><Run Language="en-gb" Text="Search a Topic"/><LineBreak/><Run Language="en-gb"/></TextBlock>
-                <TextBox HorizontalAlignment="Left" Height="19" Margin="34,220,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="171"/>
+                <TextBox x:Name="topicstbx" HorizontalAlignment="Left" Height="19" Margin="34,220,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" TextChanged="TextBox_TextChanged_1"/>
                 <TextBox x:Name="tbx_commonSearches" HorizontalAlignment="Left" Height="202" Margin="310,70,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="314"/>
                 <Rectangle HorizontalAlignment="Center" Height="80" Stroke="#FF273033" VerticalAlignment="Center" Width="657" Fill="#FF1C1C1E"/>
                 <Rectangle HorizontalAlignment="Left" Height="60" Margin="134,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="247" Fill="Black"/>
@@ -95,10 +95,9 @@
                     </Button.Template>
                 </Button>
                 <TextBlock HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="Duration" VerticalAlignment="Top" Width="78" FontSize="20" FontFamily="Impact" Foreground="White" Margin="338,10,0,0"/>
-                <TextBlock HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="Volume" VerticalAlignment="Top" Width="68" FontSize="20" FontFamily="Impact" Foreground="White" Margin="456,10,0,0"/>
                 <TextBlock x:Name="TimerDisplay" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" Width="78" Margin="338,39,0,0" Foreground="#FF1F83EA"/>
                 <ListBox x:Name="display_excercises_lbx" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="25,103,399,68" Grid.Row="1"/>
-                <Button x:Name="add_excerise_btn" Content="Add Excercise" HorizontalAlignment="Left" Height="24" Margin="24,248,0,0" Grid.Row="1" VerticalAlignment="Top" Width="128" Foreground="White" FontSize="14" FontFamily="Arial" Background="#FF1F83EA" Click="start_workout_btn_Click">
+                <Button x:Name="add_excerise_btn" Content="Add Excercise" HorizontalAlignment="Left" Height="24" Margin="24,248,0,0" Grid.Row="1" VerticalAlignment="Top" Width="128" Foreground="White" FontSize="14" FontFamily="Arial" Background="#FF1F83EA" Click="add_excerise_btn_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="{x:Type Button}">
                             <Border Background="{TemplateBinding Background}" BorderThickness="0" CornerRadius="7">
@@ -108,8 +107,9 @@
                     </Button.Template>
                 </Button>
                 <TextBlock HorizontalAlignment="Left" Height="30" Margin="31,65,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" FontSize="24" FontFamily="Bahnschrift SemiBold Condensed" Foreground="#FF1F83EA" RenderTransformOrigin="0.256,1.238"><Run Language="en-gb" Text="Search"/><LineBreak/><Run Language="en-gb"/><LineBreak/><Run Language="en-gb"/><LineBreak/><Run Language="en-gb"/></TextBlock>
-                <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Margin="401,103,23,68" Grid.Row="1"/>
-                <Button x:Name="remove_excercise" Content="Remove Excercise" HorizontalAlignment="Left" Height="24" Margin="526,248,0,0" Grid.Row="1" VerticalAlignment="Top" Width="128" Foreground="White" FontSize="14" FontFamily="Arial" Background="#FF1F83EA">
+                <WebBrowser x:Name="videoWebBrowser" Margin="440,20,61,230" Grid.Row="1"/>
+                <ListBox x:Name="lbx_workouts" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="401,103,23,68" Grid.Row="1" SelectionChanged="lbx_workouts_SelectionChanged"/>
+                <Button x:Name="remove_excercise" Content="Remove Excercise" HorizontalAlignment="Left" Height="24" Margin="526,248,0,0" Grid.Row="1" VerticalAlignment="Top" Width="128" Foreground="White" FontSize="14" FontFamily="Arial" Background="#FF1F83EA" Click="remove_excercise_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="{x:Type Button}">
                             <Border Background="{TemplateBinding Background}" BorderThickness="0" CornerRadius="7">
@@ -118,6 +118,7 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
+                <TextBox x:Name="searchtbx" HorizontalAlignment="Left" Margin="113,70,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="20" TextChanged="TextBox_TextChanged"/>
             </Grid>
         </TabItem>
 

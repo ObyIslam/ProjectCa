@@ -15,7 +15,8 @@ namespace ProjectCa
     {
         public int id { get; set; }
         public string name { get; set; }
-        
+        public string video { get; set; }
+
     }
 
 

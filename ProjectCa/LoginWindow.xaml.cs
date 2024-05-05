@@ -42,7 +42,6 @@ namespace ProjectCa
             if (query.Contains(gmail_tbx.Text) && query2.Contains(password_tbx.Text))
             {
                 // Login successful
-                MessageBox.Show("Successfully logged in");
                 openHomeWindow();
                 this.Close();
             }
